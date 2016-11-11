@@ -1,0 +1,40 @@
+{
+  "name": "mongo-client-async",
+  "version": "1.0.0",
+  "description": "A simple module to show how to use Promise in conjunction with mongodb.",
+  "main": "dist/index.js",
+  "scripts": {
+    "check-coverage": "nyc check-coverage",
+    "watch:test": "mocha src/index.test.es6 --compilers js:babel-register --watch",
+    "prebuild": "rimraf dist",
+    "build": "babel --out-dir dist src --ignore *.test.es6",
+    "test": "mocha src/index.test.es6 --compilers js:babel-register"
+  },
+  "keywords": [
+    "mongodb",
+    "promises",
+    "bluebird."
+  ],
+  "author": "Valerio Morsella",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "mocha": "^3.1.2",
+    "mongo": "^0.1.0",
+    "should": "^11.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "babel-register": "^6.18.0",
+    "nyc": "^8.4.0",
+    "rimraf": "^2.5.4"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ]
+  }
+}
